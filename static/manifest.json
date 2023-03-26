@@ -1,0 +1,13 @@
+{
+	"manifest_version": 3,
+	"name": "CyberGuardian",
+	"description": "CyberGuardian's security & ethical analysis for websites helps find alternatives with better privacy policies. Join us to make the digital world safer! 💻 🔐",
+	"version": "1.0.1",
+	"action": {
+		"default_icon": "favicon.png",
+		"default_popup": "index.html"
+	},
+	"permissions": [
+		"activeTab"
+	]
+}
