@@ -97,10 +97,6 @@
 		</span>
 
 		<span>
-			<h1 class="text-xl font-bold mb-2">
-				Company Cyber Ethics & Digital Rights Analysis
-			</h1>
-
 			<span class="flex flex-col gap-4">
 				<span>
 					<h2 class="w-fit font-bold text-lg text-accent">Website</h2>
