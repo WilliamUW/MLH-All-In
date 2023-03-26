@@ -14,13 +14,6 @@
 	let alternatives = 'Unknown';
 	let loading = false;
 
-	type Meta = {
-		name: string;
-		property: string;
-		value: string;
-		charset: string;
-	};
-
 	async function updateMetadata(site: string) {
 		if (loading) return;
 
@@ -99,7 +92,7 @@
 					? 'text-error'
 					: 'text-warning'}"
 			>
-				+{score === -1 ? 0 : Math.floor(score / 7)} CyberGuardian Credits
+				+{score === -1 ? 0 : Math.floor(score / 7)} DataDefender Credits
 			</h2>
 		</span>
 
