@@ -21,24 +21,12 @@
 		charset: string;
 	};
 
-	let metas: Meta[] = [];
-
 	async function updateMetadata(site: string) {
 		if (loading) return;
 
 		loading = true;
 
 		const metadata = await fetchMetadata(site);
-		const rawMetaTags = document.getElementsByTagName('meta');
-
-		metas = [...rawMetaTags].map(meta => {
-			return {
-				name: meta.getAttribute('name') ?? '?',
-				property: meta.getAttribute('property') ?? '?',
-				value: meta.getAttribute('content') ?? '?',
-				charset: meta.getAttribute('charset') ?? '?',
-			};
-		});
 
 		if (metadata !== null) {
 			score = metadata.score;
@@ -164,35 +152,6 @@
 				<div class="mt-8">
 					<h1 class="text-xl font-bold text-accent">Alternatives</h1>
 					<p class="whitespace-wrap text-lg">{alternatives}</p>
-				</div>
-			{/if}
-
-			{#if metas.length > 0}
-				<div class="mt-8">
-					<h1 class="text-xl font-bold text-accent">Extracted Information</h1>
-
-					<div>
-						<table class="table w-full">
-							<thead>
-								<tr>
-									<th>Name</th>
-									<th>Property</th>
-									<th>Value</th>
-									<th>Charset</th>
-								</tr>
-							</thead>
-							<tbody>
-								{#each metas as meta}
-									<tr>
-										<th>{meta.name}</th>
-										<td>{meta.property}</td>
-										<td>{meta.value}</td>
-										<td>{meta.charset}</td>
-									</tr>
-								{/each}
-							</tbody>
-						</table>
-					</div>
 				</div>
 			{/if}
 		</span>
