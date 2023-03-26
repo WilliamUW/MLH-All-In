@@ -4,14 +4,14 @@
 	import { fetchMetadata } from '../util/prompt';
 
 	let score = -1;
-	let website = 'hello '.repeat(100);
+	let website = 'Unknown';
 	let prevUrl: string | null = null;
-	let dataCollected = 'hello '.repeat(100);
-	let lastDataBreach = 'hello '.repeat(100);
-	let industryBreachPotential = 'hello '.repeat(100);
-	let riskOfDataExposure = 'hello '.repeat(100);
-	let explanation = 'hello '.repeat(100);
-	let alternatives = 'hello '.repeat(100);
+	let dataCollected = 'Unknown';
+	let lastDataBreach = 'Unknown';
+	let industryBreachPotential = 'Unknown';
+	let riskOfDataExposure = 'Unknown';
+	let explanation = 'Unknown';
+	let alternatives = 'Unknown';
 	let loading = false;
 
 	type Meta = {
